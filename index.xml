@@ -23,5 +23,12 @@
     <description>Recent content on K-State CS Hugo Starter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-starter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://ksu-cs-textbooks.github.io/hugo-starter/01-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/hugo-starter/01-introduction/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
   </channel>
 </rss>
