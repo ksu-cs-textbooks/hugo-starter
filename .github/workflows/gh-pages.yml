@@ -1,36 +1,70 @@
-# https://github.com/peaceiris/actions-hugo
-
 name: GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main  # Branch to deploy from
   pull_request:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-latest
+
+    env:
+      ########################
+      # CHANGE ME HERE       #
+      # Hugo Version         #
+      HUGO_VERSION: 0.128.0
+      ########################
+
+      # https://github.com/peaceiris/actions-hugo?tab=readme-ov-file#%EF%B8%8F-caching-hugo-modules
+      HUGO_CACHEDIR: /tmp/hugo_cache # Hugo cache directory
+
+    # https://docs.github.com/en/actions/using-jobs/using-concurrency
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      cancel-in-progress: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          hugo-version: '0.101.0'
+          fetch-depth: 0 # Fetch all history to populate last modified information
+
+      # https://github.com/peaceiris/actions-hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
           # extended: true
 
-      - name: Build
-        run: hugo -b "https://ksu-cs-textbooks.github.io/hugo-starter"
+      # https://github.com/peaceiris/actions-hugo?tab=readme-ov-file#%EF%B8%8F-caching-hugo-modules
+      # https://github.com/actions/cache
+      - name: Read Cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      # Build Options Here
+      # https://gohugo.io/commands/hugo/
+      - name: Build Hugo Site
+        run: hugo
+
+      # https://github.com/peaceiris/actions-gh-pages
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v4
+        # only publish on push to main branch
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: ${{ github.event.head_commit.message }}
+          # only for root website, not subdirectories
+          # cname: alt.cs.ksu.edu

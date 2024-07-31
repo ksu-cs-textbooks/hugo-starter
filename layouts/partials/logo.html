@@ -1,0 +1,5 @@
+{{/* Place Logo Graphic or Text Here */}}
+{{ $image := resources.Get "images/core-logo-on-purple.svg" }}
+<a id="logo" href="{{ .Site.Home.RelPermalink | default ("/" | relLangURL) }}">
+    <img src="{{ $image.RelPermalink }}" alt="Computational Core Logo" style="width: 100%">
+</a>

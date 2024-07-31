@@ -1,6 +1,6 @@
 +++
 archetype = "home"
-title = ""
+title = "Hugo Starter"
 +++
 
 Lorem Ipsum.
