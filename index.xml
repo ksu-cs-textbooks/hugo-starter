@@ -3,25 +3,33 @@
 
 
 
+  
 	
-	
-		
+	  
 
+  
 	
-	
-		
+	  
 
-	
+  
 	
 		
 		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>K-State CS Hugo Starter</title>
-    <link>https://ksu-cs-textbooks.github.io/hugo-starter/</link>
-    <description>Recent content on K-State CS Hugo Starter</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/hugo-starter/index.xml" rel="self" type="application/rss+xml" />
+    <title>Hugo Starter</title>
+    <link>https://textbooks.cs.ksu.edu/hugo-starter/</link>
+    <description>Lorem Ipsum.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://textbooks.cs.ksu.edu/hugo-starter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
   </channel>
 </rss>

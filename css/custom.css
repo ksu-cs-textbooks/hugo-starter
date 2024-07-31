@@ -2,33 +2,70 @@
 
 /* Align text on chapter pages to center */
 .chapter p {
-    text-align: center !important;
+  text-align: center !important;
 }
 
-/* Add Links for TELE and EMBED to top bar */
-.navigation,
-#top-tele-link,
-#top-embed-link {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    float: right;
+/* Fix Font Weights for Lato */
+body {
+  font-weight: 400;
+}
+#R-body h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+#R-body h3 {
+  font-weight: 700;
+  font-size: 2.0rem;
 }
 
-/* Update breadcrumb width to account for new buttons */
-#body #breadcrumbs {
-    width: calc(100% - 7*3.25rem);
+/* Sidebar Arrows */
+#R-sidebar #R-topics ul > li {
+  margin-left: 1rem; 
+}
+
+/* Sidebar Titles */
+#R-sidebar #R-topics ul > li > a b {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+/* Git Footer */
+.git-footer {
+  padding: 1px 1em;
+  background-color: rgba( 134, 134, 134, .066 ) 
+}
+.git-footer p {
+  margin: 0.5em 0px;
+}
+
+/* Theme Version Footer */
+.theme-version-footer {
+  float: right;
+  opacity: 0.25;
+}
+
+/* Menu Footer */
+#R-footer {
+  font-size: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  min-width: 230px;
+  max-width: 300px;
+  text-align: left;
+}
+#R-footer p {
+  margin: 0;
 }
 
 /* EMBED page should be 100% width */
 .embed {
-    width: 100%;
+  width: 100%;
 }
 
 /* Remove sidebar margins on EMBED and TELE pages */
-.tele #body,
-.embed #body {
+.tele #R-body,
+.embed #R-body {
     margin-left: 0px;
     min-width: 100%;
     max-width: 100%;
@@ -37,8 +74,8 @@
 
 /* Override screen width limit */
 @media screen and ( min-width: 1300px ){ 
-    .tele #body .flex-block-wrapper,
-    .embed #body .flex-block-wrapper {
+    .tele #R-body .flex-block-wrapper,
+    .embed #R-body .flex-block-wrapper {
         min-width: 100%;
         max-width: 100%;
         width: 100%;
@@ -51,7 +88,7 @@
 }
 
 /* Mirror TELE display */
-.mirror{
+.mirror {
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
     -o-transform: scale(-1, 1);
@@ -83,12 +120,12 @@
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.tele #body-inner::-webkit-scrollbar {
+.tele #R-body-inner::-webkit-scrollbar {
     display: none;
   }
   
 /* Hide scrollbar for IE, Edge and Firefox */
-.tele #body-inner {
+.tele #R-body-inner {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -105,31 +142,4 @@
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-}
-
-/* Git Footer */
-.git-footer {
-    padding: 1px 1em;
-    background-color: rgba( 134, 134, 134, .066 ) 
-}
-.git-footer p {
-    margin: 0.5em 0px;
-}
-
-/* Fix Font Weights for Lato */
-body {
-    font-weight: 400;
-}
-#body h2 {
-    font-weight: 700;
-    font-size: 2.4rem;
-}
-#body h3 {
-    font-weight: 700;
-    font-size: 2.0rem;
-}
-
-/* Sidebar Arrows */
-#sidebar ul.topics > li {
-    margin-left: 0;
 }

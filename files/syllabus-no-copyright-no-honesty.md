@@ -1,1 +1,0 @@
-{{< syllabus exclude="copyright honesty" >}}

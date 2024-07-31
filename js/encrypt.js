@@ -1,27 +1,30 @@
 // [x] russfeld
-$(document).ready(function(){
-  $('#encrypt').click(function(event){
+document.addEventListener("DOMContentLoaded", function() {
+
+  document.getElementById("encrypt")?.addEventListener("click", function (event) {
     event.preventDefault();
     var password = prompt("Please enter the password");
     if (password) {
-      var div = $('#encrypt-div').html();
+      var div = document.getElementById("encrypt-div").innerHTML;
       var encrypted = sjcl.encrypt(password, div);
       var encryptedJSON = JSON.stringify(encrypted);
       var base64 = btoa(encryptedJSON);
-      $('#encrypt').hide();
-      $('#encrypt-div').html("<p>" + base64 + "</p>");
+      document.getElementById("encrypt").style.display = "none";
+      document.getElementById("encrypt-div").innerHTML = "<p>" + base64 + "</p>";
     }
   });
-  $('#decrypt').click(function(event){
+
+  document.getElementById("decrypt")?.addEventListener("click", function (event) {
     event.preventDefault();
     var password = prompt("Please enter the password");
     if (password) {
-      var div = $('#encrypt-div').text();
+      var div = document.getElementById("encrypt-div").innerText;
+      console.log(div);
       var encryptedJSON = atob(div);
       var encrypted = JSON.parse(encryptedJSON);
       var decrypted = sjcl.decrypt(password, encrypted);
-      $('#encrypt').hide();
-      $('#encrypt-div').html(decrypted);
+      document.getElementById("decrypt").style.display = "none";
+      document.getElementById("encrypt-div").innerHTML = "<p>" + decrypted + "</p>";
     }
   });
 });

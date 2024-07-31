@@ -98,8 +98,8 @@ var onDocumentKeyDown = function( event ) {
       autoScroll = 0;
       break;
     case 77:
-      $('#body').toggleClass('mirror');
-      if($('#body').hasClass('mirror')){
+      document.getElementById("tele").classList.toggle("mirror");
+      if(document.getElementById("tele").classList.contains("mirror")){
         localStorage.setItem('mirror', 'on');
       }else{
         localStorage.setItem('mirror', 'off');
@@ -140,11 +140,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var mirror = localStorage.getItem('mirror');
     if(mirror == "on"){
-        $('#body').addClass('mirror');
+      document.getElementById("tele").classList.add("mirror");
     } else if (mirror == "off"){
-      $('#body').removeClass('mirror');
+      document.getElementById("tele").classList.remove("mirror");
     } else {
-      $('#body').addClass('mirror');
+      document.getElementById("tele").classList.add("mirror");
     }
 });
 
@@ -159,9 +159,9 @@ var isScrolling = false;
 var prevPos = 0, currentPos = 0;
 var currentTime, prevTime, timeDiff;
 
-document.getElementById("body-inner").addEventListener("scroll", function (e) {
+document.getElementById("R-body-inner").addEventListener("scroll", function (e) {
     // window.pageYOffset is the fallback value for IE
-    currentPos =document.getElementById("body-inner").scrollTop;
+    currentPos =document.getElementById("R-body-inner").scrollTop;
 });
 
 //window.addEventListener("wheel", handleManualScroll);
@@ -179,7 +179,7 @@ function handleManualScroll() {
           prevTime = null;
           setAutoScroll(autoScroll);
       }, 50);
-    }00
+    }
 }
 
 function setAutoScroll(newValue) {
@@ -197,7 +197,7 @@ function setAutoScroll(newValue) {
                 currentPos += autoScrollSpeed * timeDiff;
                 if (Math.abs(currentPos - prevPos) >= minDelta) {
                     isScrolling = true;
-                    elem = document.getElementById("body-inner");
+                    elem = document.getElementById("R-body-inner");
                     elem.scrollTo(0, currentPos);
                     isScrolling = false;
                     prevPos = currentPos;
