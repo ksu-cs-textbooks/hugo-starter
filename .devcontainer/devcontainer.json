@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.128.0/containers/hugo
+{
+	"name": "Hugo",
+	"image": "hugomods/hugo:go-git-0.128.0",
+	"customizations": {
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			// "settings": {
+			// 	"terminal.integrated.shell.linux": "/bin/zsh"
+			// },
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"bungcip.better-toml",
+				"davidanson.vscode-markdownlint"
+			],
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		1313
+	],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "git config --global --add safe.directory /workspaces/cis642-643 && hugo serve"
+}
