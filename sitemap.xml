@@ -1,38 +1,21 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/</loc>
+    <loc>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/index.html</loc>
     <lastmod>2024-07-31T09:49:56-05:00</lastmod>
   </url>
   <url>
-    <loc>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/01-welcome/</loc>
+    <loc>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/01-welcome/index.html</loc>
     <lastmod>2022-08-04T09:40:32-05:00</lastmod>
   </url>
   <url>
-    <loc>https://textbooks.cs.ksu.edu/hugo-starter/categories/</loc>
+    <loc>https://textbooks.cs.ksu.edu/hugo-starter/categories/index.html</loc>
   </url>
   <url>
-    <loc>https://textbooks.cs.ksu.edu/hugo-starter/</loc>
+    <loc>https://textbooks.cs.ksu.edu/hugo-starter/index.html</loc>
     <lastmod>2024-07-31T09:49:56-05:00</lastmod>
   </url>
   <url>
-    <loc>https://textbooks.cs.ksu.edu/hugo-starter/tags/</loc>
+    <loc>https://textbooks.cs.ksu.edu/hugo-starter/tags/index.html</loc>
   </url>
 </urlset>

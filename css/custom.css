@@ -1,5 +1,13 @@
 /* [x] russfeld  */
 
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/lato/Lato-Regular.woff2') format('woff2');
+}
+
 /* Align text on chapter pages to center */
 .chapter p {
   text-align: center !important;
@@ -116,7 +124,7 @@ body {
 /* TELE code size override */
 .tele pre,
 .tele code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

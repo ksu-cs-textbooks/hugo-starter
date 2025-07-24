@@ -1,25 +1,8 @@
-
-
-
-
-
-  
-	
-	  
-
-  
-	
-	  
-
-  
-	
-		
-		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome :: Hugo Starter</title>
-    <link>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/01-welcome/</link>
+    <title>Welcome :: Hugo Starter Template</title>
+    <link>https://textbooks.cs.ksu.edu/hugo-starter/01-introduction/01-welcome/index.html</link>
     <description>Lorem Ipsum.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
