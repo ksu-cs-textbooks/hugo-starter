@@ -15,7 +15,7 @@ jobs:
       ########################
       # CHANGE ME HERE       #
       # Hugo Version         #
-      HUGO_VERSION: 0.128.0
+      HUGO_VERSION: 0.148.1
       ########################
 
       # https://github.com/peaceiris/actions-hugo?tab=readme-ov-file#%EF%B8%8F-caching-hugo-modules

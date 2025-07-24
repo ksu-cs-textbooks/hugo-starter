@@ -1,2 +1,6 @@
 github.com/ksu-cs-textbooks/hugo-theme-relearn v0.0.0-20240529202521-2cadd589dabc h1:pLh7yrzXygVmX6t5vUc2xviQ5bqZp5EyVc8OhQVn+BU=
 github.com/ksu-cs-textbooks/hugo-theme-relearn v0.0.0-20240529202521-2cadd589dabc/go.mod h1:h8Ds5Jx7bTVFTouThBJ2f1KYa2GNxIi/RMbHkNcNVJ8=
+github.com/ksu-cs-textbooks/hugo-theme-relearn v0.0.0-20250724191257-a0ca9087abd9 h1:bvX8MnAP4s7qkYODpZRUy/XOEpWElBqN7xzTxr3PVeY=
+github.com/ksu-cs-textbooks/hugo-theme-relearn v0.0.0-20250724191257-a0ca9087abd9/go.mod h1:h8Ds5Jx7bTVFTouThBJ2f1KYa2GNxIi/RMbHkNcNVJ8=
+github.com/ksu-cs-textbooks/hugo-theme-relearn v0.0.0-20250724193055-4bcd38d4ac26 h1:MtFWVxj25H0SmdtOk3yHPUkkYmTHAVoJ3G7AGH7GwKU=
+github.com/ksu-cs-textbooks/hugo-theme-relearn v0.0.0-20250724193055-4bcd38d4ac26/go.mod h1:h8Ds5Jx7bTVFTouThBJ2f1KYa2GNxIi/RMbHkNcNVJ8=
